@@ -7,7 +7,9 @@ The workflow automates the processing of .fastq.gz files located in a specified 
 
 #### Input Parameters
 params.raw: Path to the directory containing raw sequencing data files in .fastq.gz format.
+
 params.trimmed: Destination directory for storing the trimmed read files.
+
 params.assembled: Destination directory for storing the assembled genome sequences.
 
 ### Processes
