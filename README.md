@@ -15,8 +15,21 @@ params.assembled: Destination directory for storing the assembled genome sequenc
 ### Processes
 1. trim_reads
 This process uses Trimmomatic for trimming single-end Illumina sequencing data
+
+Inputs
+Read File (read_file): The FASTQ file to be trimmed.
+
+Outputs
+Trimmed File: A file named with the original base name of the input file, appended with _trimmed. For example, sample.fastq.gz becomes sample_trimmed
+
 2. assemble_reads
 This process assembles the trimmed reads using SKESA.
+
+Inputs
+Trimmed Reads (trimmed_reads): The output from the trim_reads process.
+
+Outputs
+Assembled Genome Sequence: A FASTA file named with the base name of the input file, appended with _assembled.fasta. For example, sample_trimmed becomes sample_assembled.fasta
 
 ## Usage
 To execute this workflow, ensure Nextflow is installed and available in your environment. Place your raw .fastq.gz files in the directory specified by params.raw. Then run the workflow with the command:
